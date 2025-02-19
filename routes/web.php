@@ -25,7 +25,7 @@ Route::prefix('admin')->group(function () {
 
     //后台用户相关
     Route::prefix('user')->group(function () {
-        Route::get('login', [UserController::class, 'login']);//登录
+        Route::get('login', [UserController::class, 'login'])->name('login');//登录
     });
 
     //sql相关
@@ -37,4 +37,5 @@ Route::prefix('admin')->group(function () {
 });
 
 Route::get('/', function () {
+    return view('login');
 });

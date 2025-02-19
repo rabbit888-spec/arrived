@@ -14,7 +14,7 @@ class UserController extends Controller
     /**
      * 用户登录
      * @param Request $request
-     * @return \Illuminate\Http\JsonResponse|void
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Foundation\Application|\Illuminate\Http\JsonResponse
      * @throws \App\Exceptions\AppException
      */
     public function login(Request $request)
@@ -25,6 +25,7 @@ class UserController extends Controller
         }
 
         $userService = new UserService();
-        return ApiResponse::success($userService->login($params));
+        $userService->login($params);
+        return view('query_logs.index');
     }
 }
