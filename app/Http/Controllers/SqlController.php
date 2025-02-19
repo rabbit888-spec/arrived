@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use app\Helpers\ApiResponse;
-use app\Services\SqlService;
+use App\Helpers\ApiResponse;
+use App\Services\SqlService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 

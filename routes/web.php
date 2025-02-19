@@ -28,6 +28,7 @@ Route::prefix('admin')->group(function () {
         Route::get('login', [UserController::class, 'login']);//登录
     });
 
+    //sql相关
     Route::middleware(['adminAuthority'])->prefix('dev')->group(function () {
         Route::get('sqlQuery', [SqlController::class, 'sqlQuery'])->name('query_logs.index');//列表
         Route::get('sqlQueryExportExcel', [SqlController::class, 'sqlQuery'])->name('sqlQueryExportExcel');//导出excel文件

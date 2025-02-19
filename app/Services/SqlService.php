@@ -2,7 +2,7 @@
 
 namespace App\Services;
 
-use app\Helpers\Tool;
+use App\Helpers\Tool;
 use App\Models\SqlLog;
 use App\Models\Users;
 use Illuminate\Pagination\LengthAwarePaginator;

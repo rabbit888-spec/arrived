@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use app\Helpers\ApiResponse;
-use app\Services\UserService;
+use App\Helpers\ApiResponse;
+use App\Services\UserService;
 use Illuminate\Http\Request;
 
 /**
@@ -17,7 +17,7 @@ class UserController extends Controller
      * @return \Illuminate\Http\JsonResponse|void
      * @throws \App\Exceptions\AppException
      */
-    public function login(Request $request): ApiResponse
+    public function login(Request $request)
     {
         $params = $request->all();
         if (empty($params['username']) || empty($params['password'])) {

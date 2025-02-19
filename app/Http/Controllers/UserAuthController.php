@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use app\Helpers\ApiResponse;
-use app\Services\UserAuthService;
+use App\Helpers\ApiResponse;
+use App\Services\UserAuthService;
 use Illuminate\Http\Request;
 
 /**
@@ -17,7 +17,7 @@ class UserAuthController extends Controller
      * @return \Illuminate\Http\JsonResponse
      * @throws \App\Exceptions\AppException
      */
-    public function add(Request $request): ApiResponse
+    public function add(Request $request)
     {
         $params = $request->all();
         if (empty($params['user_id']) || empty($params['role_id'])
